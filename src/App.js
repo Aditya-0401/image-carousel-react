@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+// @ts-nocheck
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import ImageCarousel from './ImageCarousel';
 
 function App() {
+
+  const images = [
+    "https://picsum.photos/id/234/1000/500",
+    "https://picsum.photos/id/235/1000/500",
+    "https://picsum.photos/id/236/1000/500",
+    "https://picsum.photos/id/237/1000/500"
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Image Carousel</h1>
+      <ImageCarousel images={images} />
     </div>
   );
-}
+};
 
 export default App;
